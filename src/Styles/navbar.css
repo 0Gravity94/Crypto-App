@@ -9,11 +9,12 @@
   color: black;
 }
 
-.log {
+.logo {
   text-decoration: none;
   color: black;
   font-size: 1.3rem;
-  margin-left: 1rem;
+  margin: 0;
+  padding: 25px 15px 25px 15px;
 }
 
 .navigation-menu {
@@ -31,6 +32,22 @@
 }
 
 .navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.navigation-links ul {
+  display: none;
+  padding: 0;
+}
+
+.navigation-links li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.navigation-links li a {
   text-decoration: none;
   display: block;
   width: 100%;
@@ -57,6 +74,42 @@
 
 @media screen and (max-width: 768px) {
   .hamburger {
+    display: block;
+  }
+  .navigation-menu ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: #fff;
+  }
+  .navigation-menu li {
+    margin: 0;
+    padding: 25px 15px 25px 15px;
+    border-bottom: 1px solid rgb(230, 229, 229);
+  }
+  .navigation-menu.expanded ul {
+    display: block;
+  }
+  .navigation-links ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: #fff;
+  }
+  .navigation-links li {
+    margin: 0;
+    padding: 25px 15px 25px 15px;
+    border-bottom: 1px solid rgb(230, 229, 229);
+  }
+  .navigation-links.expanded ul {
     display: block;
   }
 }
