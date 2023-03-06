@@ -1,84 +1,62 @@
-* {
-  box-sizing: border-box;
+.navigation {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  background-color: #fff;
+  color: black;
+}
+
+.log {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+.navigation-menu {
+  margin-left: auto;
+}
+
+.navigation-menu ul {
+  display: flex;
   padding: 0;
-  margin: 0;
 }
 
-.navbar {
-  font-size: 18px;
-  background: #fff;
-  border: none;
-  padding: 10px;
-}
-
-.main-nav {
+.navigation-menu li {
   list-style-type: none;
+  margin: 0 1rem;
+}
+
+.navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.navigation-menu li a:hover {
+  color: rgb(100, 99, 99);
+}
+
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
   display: none;
 }
 
-#nav-links,
-#logo {
-  text-decoration: none;
-}
-
-.main-nav li {
-  text-align: center;
-  margin: 15px auto;
-}
-
-#logo {
-  display: inline-block;
-  font-size: 22px;
-  margin-top: 10px;
-  margin-left: 20px;
-}
-
-#navbar-toggle {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-.active {
-  display: block;
-}
-
-@media screen and (min-width: 768px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: 70px;
-    align-items: center;
-  }
-
-  .main-nav {
-    display: flex;
-    margin-right: 30px;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  .main-nav li {
-    margin: 0;
-  }
-
-  #nav-links {
-    margin-left: 40px;
-  }
-
-  #logo {
-    margin-top: 0;
-  }
-
-  #navbar-toggle {
-    display: none;
-  }
-
-  #logo:hover,
-  #nav-links:hover {
-    color: rgb(130, 127, 127);
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
 }
