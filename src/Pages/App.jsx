@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 import "../Styles/App.css";
 
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Footer />
     </div>
   );
 }
