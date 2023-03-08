@@ -32,6 +32,7 @@
 }
 
 #about button {
+  display: flex;
   font-size: 16px;
   font-weight: 600;
   color: black;
@@ -73,11 +74,88 @@
   line-height: 22px;
 }
 
+/* part 3 */
+#download-container {
+  position: relative;
+  margin: auto;
+  padding-top: 1.5rem;
+  height: 398px;
+}
+
+#download {
+  position: absolute;
+  display: flex;
+  margin-top: 9rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  padding: 0px 3rem 0px 3rem;
+  width: 92%;
+  height: 65%;
+  background-color: rgba(10, 104, 244, 1);
+  border-radius: 60px 60px 0 0;
+}
+
+#download-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 254px;
+}
+#download-info h1 {
+  font-size: 36px;
+  line-height: 42px;
+  color: white;
+  font-weight: 500;
+}
+
+#download-info p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+#download-info button {
+  padding: 0.5rem 3rem;
+  color: rgba(10, 104, 244, 1);
+  font-weight: 600;
+  text-align: center;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+#ambasador {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 432px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  bottom: 140px;
+}
+
+#ambasador img {
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
 @media screen and (max-width: 768px) {
+  /* Part 1 */
   #about {
     border: none;
     margin-top: 3.5rem;
-    padding: 0 1rem 1.5rem 1rem;
+    padding: 0 0 1.5rem 0;
   }
 
   #about h2 {
@@ -96,6 +174,7 @@
   }
 
   #about button {
+    display: flex;
     font-size: 12px;
     font-weight: 600;
     color: black;
@@ -105,4 +184,107 @@
     border: 1px solid black;
     border-radius: 20px;
   }
+  /* Part 2 */
+  #questions {
+    display: grid;
+    padding: 0 1rem 5rem 1rem;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+    margin-top: 2.5rem;
+    gap: 3.5rem;
+  }
+
+  #question-item h3 {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: black;
+    margin-top: 1.5rem;
+  }
+
+  #question-item p {
+    font-size: 16px;
+    color: #87898c;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #questions button {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    line-height: 22px;
+  }
+
+  #download-container {
+    position: relative;
+    margin: auto;
+    padding-top: 1.5rem;
+    height: 398px;
+  }
+
+  #download {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+    margin-top: 2rem;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 3rem 0.75rem 0 0.75rem;
+    width: 100%;
+    height: max-content;
+    background-color: rgba(10, 104, 244, 1);
+    border-radius: 60px 60px 0 0;
+  }
+
+  #download-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 254px;
+  }
+
+  #download-info h1 {
+    font-size: 28px;
+    line-height: 36px;
+    color: white;
+    font-weight: 500;
+  }
+
+  #download-info p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  #download-info button {
+    padding: 0.5rem 1rem;
+    color: rgba(10, 104, 244, 1);
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    background-color: white;
+    border-radius: 0.5rem;
+  }
+
+  #ambasador {
+    position: absolute;
+    inset: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    border: none;
+    margin: auto;
+    display: block;
+    width: 0px;
+    height: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+  }
+}
+
+#ambasador img {
 }
