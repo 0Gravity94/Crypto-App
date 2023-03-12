@@ -207,13 +207,13 @@ function Footer() {
               <img
                 src="	https://pintu.co.id/_next/image?url=%2Fstatic%2Fimages%2Fshared%2Fbrand-ambassador.webp&w=1080&q=75"
                 alt="ambasador"
-                className="lg:visible"
+                id="amb1"
               />
-              {/* <img
+              <img
                 src="https://pintu.co.id/_next/image?url=%2Fstatic%2Fimages%2Fshared%2Fbrand-ambassador-mobile.webp&w=640&q=75"
                 alt="ambasador"
-                className="lg:hidden"
-              /> */}
+                id="amb2"
+              />
             </div>
           </div>
         </div>
