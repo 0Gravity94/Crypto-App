@@ -51,6 +51,11 @@
   margin: 0;
   padding: 25px 15px 25px 15px;
 }
+
+.navigation-links li a {
+  display: flex;
+}
+
 .navigation-links.expanded ul {
   display: block;
   width: max-content;
