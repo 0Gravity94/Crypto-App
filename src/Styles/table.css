@@ -5,10 +5,11 @@ caption {
 table {
   overflow-x: auto;
   width: 100%;
-  border-collapse: separate;
+  /* border-collapse: collapse; */
   text-indent: 0px;
   border: 1px solid rgb(213, 213, 213);
   border-radius: 0.5rem;
+
   /* border-spacing: 2px; */
 }
 
@@ -20,8 +21,7 @@ thead {
 
 tr th {
   padding: 1.25rem 1.25rem 1.25rem 75px;
-  text-align: left;
-  border-bottom-width: 1px;
+  /* border-bottom-width: 1px; */
 }
 
 th p {
@@ -41,13 +41,5 @@ tbody tr {
   vertical-align: inherit;
   font-size: 16px;
   line-height: 22px;
-  -webkit-box-align: center;
-}
-
-tbody td {
-  border-bottom: 1px solid rgb(213, 213, 213);
-}
-
-td tr {
-  padding: 1.25rem 1.25rem 1.25rem 75px;
+  /* -webkit-box-align: center; */
 }

@@ -12,7 +12,7 @@ function Table() {
             <th scope="col">
               <p>CRYPTO</p>
             </th>
-            <th scope="col" className="text-left">
+            <th scope="col">
               <p>HARGA</p>
             </th>
             <th scope="col">
