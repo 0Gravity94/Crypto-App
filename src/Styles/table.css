@@ -5,11 +5,10 @@ caption {
 table {
   overflow-x: auto;
   width: 100%;
-  /* border-collapse: collapse; */
+  border-collapse: separate;
   text-indent: 0px;
   border: 1px solid rgb(213, 213, 213);
   border-radius: 0.5rem;
-
   /* border-spacing: 2px; */
 }
 
@@ -33,13 +32,10 @@ th p {
 
 tbody {
   display: table-header-group;
-  vertical-align: middle;
 }
 
 tbody tr {
   display: table-row;
-  vertical-align: inherit;
   font-size: 16px;
   line-height: 22px;
-  /* -webkit-box-align: center; */
 }

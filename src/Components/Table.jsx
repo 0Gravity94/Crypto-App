@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import "../Styles/table.css";
 
 function Table() {
+  const [datas, setDatas] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  function fetchData() {
+    axios
+      .get(`https://api.pintu.co.id/v2/wallet/supportedCurrencies`)
+      .then((res) => {
+        const { data } = res.data;
+        const temp = [...datas];
+        temp.push(data);
+        setDatas(temp);
+        console.log(datas);
+      })
+      .catch((err) => {
+        alert(err.toString());
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   return (
     <div id="container">
       <table cellSpacing={0} cellPadding={0}>
@@ -30,46 +56,6 @@ function Table() {
           </tr>
         </thead>
         <tbody id="table-body">
-          <tr>
-            <td id="data1">
-              <a href="#">
-                <div>
-                  <div id="logo">Logo</div>
-                  <div id="names">
-                    <p>Bitcoin</p>
-                    <p>BTC</p>
-                  </div>
-                </div>
-              </a>
-            </td>
-            <td id="data2">
-              <div>Rp 374.834.579</div>
-            </td>
-            <td id="data3">
-              <div>
-                <div>sym</div>
-                <p>%</p>
-              </div>
-            </td>
-            <td id="data4">
-              <div>
-                <div>sym</div>
-                <p>%</p>
-              </div>
-            </td>
-            <td id="data5">
-              <div>
-                <div>sym</div>
-                <p>%</p>
-              </div>
-            </td>
-            <td id="data6">
-              <div>
-                <div>sym</div>
-                <p>%</p>
-              </div>
-            </td>
-          </tr>
           <tr>
             <td id="data1">
               <a href="#">
