@@ -116,7 +116,7 @@ function Navbar() {
                   : "navigation-links"
               }
             >
-              <ul>
+              <ul className="lg:left-72">
                 <li>
                   <a href="#">
                     <div id="logo-items">
@@ -158,7 +158,10 @@ function Navbar() {
                     </div>
                     <div>
                       <h3>
-                        Earn <span>Baru</span>
+                        Earn{" "}
+                        <span className="bg-red-500 text-white text-sm font-semibold mx-1 px-2 py-0.5 rounded-md">
+                          Baru
+                        </span>
                       </h3>
                       <p>Simpan aset crypto, dapatkan bunga tiap jam</p>
                     </div>
@@ -239,7 +242,7 @@ function Navbar() {
                   : "navigation-links"
               }
             >
-              <ul>
+              <ul className="lg:right-72">
                 <li>
                   <a href="#">
                     <div id="logo-items">
@@ -348,7 +351,7 @@ function Navbar() {
                   : "navigation-links"
               }
             >
-              <ul>
+              <ul className="lg:right-36">
                 <li>
                   <a href="#">
                     <div>
@@ -416,7 +419,7 @@ function Navbar() {
                   : "navigation-links"
               }
             >
-              <ul>
+              <ul className="-right-9">
                 <li>
                   <a href="#">
                     <div id="logo-items">
@@ -520,7 +523,7 @@ function Navbar() {
                   : "navigation-links"
               }
             >
-              <ul>
+              <ul className="right-20">
                 <li>
                   <a href="#">
                     <div id="logo-items">

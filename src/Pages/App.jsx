@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Layout from "../Components/Layout";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import TopMenu from "../Components/TopMenu";
@@ -11,10 +12,12 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <TopMenu />
-      <Table />
-      <Footer />
+      <Layout>
+        <Navbar />
+        <TopMenu />
+        <Table />
+        <Footer />
+      </Layout>
     </div>
   );
 }

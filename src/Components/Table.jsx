@@ -2,32 +2,39 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import "../Styles/table.css";
+import { data } from "autoprefixer";
 
 function Table() {
-  const [datas, setDatas] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [datas, setDatas] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // const objValues = Object.keys(datas).map((k) => datas[k])
+  // console.log(objValues)
 
-  function fetchData() {
-    axios
-      .get(`https://api.pintu.co.id/v2/wallet/supportedCurrencies`)
-      .then((res) => {
-        const { data } = res.data;
-        const temp = [...datas];
-        temp.push(data);
-        setDatas(temp);
-        console.log(datas);
-      })
-      .catch((err) => {
-        alert(err.toString());
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  // function fetchData() {
+  //   axios
+  //     .get(`https://api.pintu.co.id/v2/wallet/supportedCurrencies`)
+  //     .then((res) => {
+  //       // const { data } = res.data;
+  //       // const temp = [datas];
+  //       // temp.push(data);
+  //       // setDatas(temp);
+  //       // console.log(datas);
+  //       const results = res.data;
+  //       setDatas(results);
+  //       console.log(results);
+  //     })
+  //     .catch((err) => {
+  //       alert(err.toString());
+  //     })
+  //     .finally(() => {
+  //       setLoading(false);
+  //     });
+  // }
 
   return (
     <div id="container">
@@ -57,44 +64,47 @@ function Table() {
         </thead>
         <tbody id="table-body">
           <tr>
-            <td id="data1">
-              <a href="#">
-                <div>
-                  <div id="logo">Logo</div>
-                  <div id="names">
-                    <p>Bitcoin</p>
-                    <p>BTC</p>
+            <>
+              <td id="data1">
+                <a href="#">
+                  <div>
+                    <div id="logo">Logo</div>
+                    <div id="names">
+                      <p>Bitcoin</p>
+                      <p>BTC</p>
+                    </div>
                   </div>
+                </a>
+              </td>
+              <td id="data2">
+                <div>Rp 374.834.579</div>
+              </td>
+              <td id="data3">
+                <div>
+                  <div>sym</div>
+                  <p>%</p>
                 </div>
-              </a>
-            </td>
-            <td id="data2">
-              <div>Rp 374.834.579</div>
-            </td>
-            <td id="data3">
-              <div>
-                <div>sym</div>
-                <p>%</p>
-              </div>
-            </td>
-            <td id="data4">
-              <div>
-                <div>sym</div>
-                <p>%</p>
-              </div>
-            </td>
-            <td id="data5">
-              <div>
-                <div>sym</div>
-                <p>%</p>
-              </div>
-            </td>
-            <td id="data6">
-              <div>
-                <div>sym</div>
-                <p>%</p>
-              </div>
-            </td>
+              </td>
+              <td id="data4">
+                <div>
+                  <div>sym</div>
+                  <p>%</p>
+                </div>
+              </td>
+              <td id="data5">
+                <div>
+                  <div>sym</div>
+                  <p>%</p>
+                </div>
+              </td>
+              <td id="data6">
+                <div>
+                  <div>sym</div>
+                  <p>%</p>
+                </div>
+              </td>
+            </>
+            ))}
           </tr>
         </tbody>
       </table>
