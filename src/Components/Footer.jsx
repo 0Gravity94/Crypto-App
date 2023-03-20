@@ -3,6 +3,8 @@ import "../Styles/footer.css";
 
 function Footer() {
   const [isAlamatExpanded, setIsAlamatExpanded] = useState(false);
+  const [isPintuExpanded, setIsPintuExpanded] = useState(false);
+  const [isPerusahaanExpanded, setIsPerusahaanExpanded] = useState(false);
 
   return (
     <div className="container">
@@ -403,11 +405,21 @@ function Footer() {
                 </div>
               </div>
               <div id="info-items">
-                <h1 id="footer-title">Alamat Perusahaan</h1>
+                <h1
+                  id="footer-title"
+                  onClick={() => {
+                    setIsAlamatExpanded(!isAlamatExpanded);
+                  }}
+                  className="cursor-pointer lg:cursor-default"
+                >
+                  Alamat Perusahaan
+                </h1>
                 <div
                   id="alamat-detail"
                   className={
-                    isExpanded ? "navigation-menu expanded" : "navigation-menu"
+                    isAlamatExpanded
+                      ? "alamat-detail expanded"
+                      : "alamat-detail"
                   }
                 >
                   <div id="kantor-pusat">
@@ -429,8 +441,21 @@ function Footer() {
                 </div>
               </div>
               <div id="info-items">
-                <h1 id="footer-title">Pintu</h1>
-                <div id="pintu-detail">
+                <h1
+                  id="footer-title"
+                  onClick={() => {
+                    setIsPintuExpanded(!isPintuExpanded);
+                  }}
+                  className="cursor-pointer lg:cursor-default"
+                >
+                  Pintu
+                </h1>
+                <div
+                  id="pintu-detail"
+                  className={
+                    isPintuExpanded ? "pintu-detail expanded" : "pintu-detail"
+                  }
+                >
                   <div id="pintu-items">
                     <a href="#">Produk</a>
                     <a href="#">Harga Crypto</a>
@@ -442,8 +467,23 @@ function Footer() {
                 </div>
               </div>
               <div id="info-items">
-                <h1 id="footer-title">Perusahaan</h1>
-                <div id="perusahaan-detail">
+                <h1
+                  id="footer-title"
+                  onClick={() => {
+                    setIsPerusahaanExpanded(!isPerusahaanExpanded);
+                  }}
+                  className="cursor-pointer lg:cursor-default"
+                >
+                  Perusahaan
+                </h1>
+                <div
+                  id="perusahaan-detail"
+                  className={
+                    isPerusahaanExpanded
+                      ? "perusahaan-detail expanded"
+                      : "perusahaan-detail"
+                  }
+                >
                   <div id="perusahaan-items">
                     <a href="#">Tentang</a>
                     <a href="#">Hubungi Kami</a>

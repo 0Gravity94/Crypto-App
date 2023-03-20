@@ -409,15 +409,15 @@
     color: black;
   }
 
-  #alamat-detail,
-  #pintu-detail,
-  #perusahaan-detail {
+  .alamat-detail,
+  .pintu-detail,
+  .perusahaan-detail {
     display: none;
   }
 
-  #alamat-detail.expanded,
-  #pintu-detail.expanded,
-  #perusahaan-detail.expanded {
+  .alamat-detail.expanded,
+  .pintu-detail.expanded,
+  .perusahaan-detail.expanded {
     display: block;
   }
 
