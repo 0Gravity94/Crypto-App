@@ -488,10 +488,16 @@ function Footer() {
                     <a href="#">Tentang</a>
                     <a href="#">Hubungi Kami</a>
                     <a href="#">
-                      Karier <span>We're Hiring!</span>
+                      Karier{" "}
+                      <span className="bg-blue-600 text-white text-sm font-semibold mx-1 px-2 py-1 rounded-md">
+                        We're Hiring!
+                      </span>
                     </a>
                     <a href="#">
-                      Karier Engineering <span>We're Hiring!</span>
+                      Karier Engineering{" "}
+                      <span className="bg-blue-600 text-white text-sm font-semibold mx-1 px-2 py-1 rounded-md">
+                        We're Hiring!
+                      </span>
                     </a>
                   </div>
                 </div>
