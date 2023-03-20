@@ -104,7 +104,6 @@ function Table() {
                 </div>
               </td>
             </>
-            ))}
           </tr>
         </tbody>
       </table>

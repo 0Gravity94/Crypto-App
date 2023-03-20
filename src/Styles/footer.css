@@ -415,6 +415,12 @@
     display: none;
   }
 
+  #alamat-detail.expanded,
+  #pintu-detail.expanded,
+  #perusahaan-detail.expanded {
+    display: block;
+  }
+
   #kantor-pusat,
   #operasional {
     padding-top: 1.5rem;

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/footer.css";
 
 function Footer() {
+  const [isAlamatExpanded, setIsAlamatExpanded] = useState(false);
+
   return (
     <div className="container">
       <div id="about">
@@ -291,7 +293,6 @@ function Footer() {
                       </g>
                     </g>
                   </svg>
-
                   <div id="logo-container">
                     <a
                       target="_blank"
@@ -403,7 +404,12 @@ function Footer() {
               </div>
               <div id="info-items">
                 <h1 id="footer-title">Alamat Perusahaan</h1>
-                <div id="alamat-detail">
+                <div
+                  id="alamat-detail"
+                  className={
+                    isExpanded ? "navigation-menu expanded" : "navigation-menu"
+                  }
+                >
                   <div id="kantor-pusat">
                     <h1>Kantor Pusat</h1>
                     <p>
